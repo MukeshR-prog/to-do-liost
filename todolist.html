@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+    <style>
+        .front{
+            background-color: black;
+
+        }
+        .display{
+           
+            background-image: url("https://transferit.com.ph/pcimages/7327358/153549488/12/1/FFFFFF/prod.png?b=11429348&v=1711413941");
+            margin-top: 50px;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        h1{
+            text-align: center;
+            margin-top: 50px;
+            margin-left: 13%;
+            
+            background-color: black;
+            color: white;
+            padding: 15px;
+        }
+        .input{
+            text-align: center;
+            margin-top: 50px;
+            margin-left: 20%;
+            margin-right: 200px;
+            padding: 15px;
+            border-color: rgb(0, 0, 0);
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: rgb(248, 73, 73);
+            color: white;
+        }
+        .but1{
+            border-radius: 25px;
+            padding: 15px 10px;
+            background-color: rgb(0, 249, 0);
+            color: rgb(0, 0, 0);
+            
+        }
+        .list{
+            margin-left: 200px;
+            margin-right: 20px;
+            margin-top: 50px;
+            font-size: 20px;
+        }
+        .but2{
+            border-radius: 25px;
+            padding: 15px 10px;
+            background-color: rgb(249, 0, 0);
+            color: rgb(0, 0, 0);
+            margin-left: 250px;
+            margin-bottom: 20px;
+
+        }
+        .but2:hover{
+            border-radius: 25px;
+            padding: 15px 10px;
+            background-color: rgb(0, 249, 0);
+            color: rgb(0, 0, 0);
+
+        }
+        
+        
+    </style>
+</head>
+<body>
+    
+    <div class="front">
+    <div class="display">
+    <h1>To Do List</h1>
+    <input class="input" type="text" id="input" placeholder="Enter your task">
+    <button class="but1" onclick="add()">Add Task</button>
+    <ul class="list" id="list-container">
+        <li >Add Your Task
+            <button class="but2" onclick="deleteItem(event)">Delete</button>
+        </li>
+    </ul>
+
+
+
+    </div>
+</div>
+    <script>
+        var ul = document.getElementById("list-container")
+        var input = document.getElementById("input") 
+        function add()
+        {
+            var listitem = document.createElement("li")
+            listitem.innerHTML=input.value + "<button style='border-radius: 25px; padding: 15px 10px; margin-bottom: 10px; margin-left:200px; background-color: rgb(249, 0, 0); color: rgb(0,0,0); margin-right : 20%;' onclick='deleteItem(event)'>Delete</button>"
+            ul.append(listitem)
+         }
+        function deleteItem(event)
+        {
+            event.target.parentElement.remove()
+        }
+     </script>
+    </body>
+</html>
+                  
+  
+
+
+
+    
+   
+    
+    
+    
+    
